@@ -1,0 +1,214 @@
+/* USER VARIABLES SECTION */
+
+:root {
+	--accent: rgb(24, 63, 16);
+	--text: #0abab5;
+	--bgmoon: #090909;
+	--bgsun: #faf3e6;
+	--regular-text: 16px;
+	--lineheight: 1.65;
+	--userfont: 'Josefin Sans', sans-serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+body {
+	font-family: var(--userfont);
+	font-size: var(--regular-text);
+	line-height: var(--lineheight);
+	color: var(--text);
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+}
+
+/* USER STYLES */
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.content {
+	flex: 1 1 auto;
+}
+.container {
+	max-width: 1180px;
+	margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+	background-color: var(--bgmoon);
+	height: 100vh;
+}
+
+.header__container {
+	max-width: 1680px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.header__column {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+/* Header Top */
+
+.header__top {
+	display: flex;
+	min-height: 130px;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 0;
+	gap: 1em;
+}
+
+/* Header Logo */
+
+.header__logo {
+	color: var(--text);
+	font-size: 25px;
+}
+
+/* Header Nav */
+
+.header__nav{
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	min-width: 500px;
+}
+
+.header__nav-en {
+
+}
+
+.header__list {
+	display: flex;
+	gap: 3em;
+}
+.header__link {
+	color: #fff;
+	transition: all .25s ease-in-out;
+}
+.header__link:hover{
+	color: var(--text);
+}
+.header__nav-ru {
+	display: none;
+}
+
+/* Header Buttons */
+
+.header__buttons{
+	display: flex;
+	justify-content: space-between;
+	min-width: 250px;
+	gap: 1em;
+}
+
+/* Header Contact */
+
+.header__contact {
+}
+.header__contact--button {
+	padding: 10px 15px;
+	background-color: var(--text);
+	color: #fff;
+	font-weight: 600;
+	border-radius: 25px;
+	box-shadow: 0 0 5px var(--text);
+	animation: k-contact 2s ease-in-out infinite;
+}
+.header__contact--button-en {
+}
+.header__contact--button-ru {
+	display: none;
+}
+
+/* Header mini Buttons ( En-Ru | Night-Light ) */
+
+.header__mini-buttons{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1em;
+}
+
+/* Header Translate */
+
+.header__translate {
+}
+.header__translate--button{
+	text-align: center;
+	background-color: var(--text);
+	color: #fff;
+	width: 30px;
+	height: 30px;
+	font-weight: 600;
+	padding: 7px;
+	border-radius: 50%;
+	box-shadow: 0 0 5px var(--text);
+	transition: all .4s ease-in-out;
+}
+.header__translate--button:hover{
+	box-shadow: 0 0 11px var(--text);
+	opacity: 1;
+}
+.header__translate--button-en{
+}
+.header__translate--button-ru {
+	display: none;
+}
+
+/* Header Theme */
+
+.header__theme {
+	display: flex;
+	gap: 1em;
+}
+.header__theme--button-moon {
+}
+.header__theme--button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--text);
+	width: 30px;
+	height: 30px;
+	padding: 5px;
+	border-radius: 50%;
+	box-shadow: 0 0 5px var(--text);
+	transition: all .35s ease-in-out;
+}
+.header__theme--button:hover{
+	box-shadow: 0 0 11px var(--text);
+}
+.header__theme--button-icon{
+	width: 80%;
+	height: 80%;
+}
+.header__theme--button-sun {
+	display: none;
+}
+.header__main {
+}
+
+
+@keyframes k-contact{
+	0% {
+	opacity: 0.75;
+	box-shadow: 0 0 10px var(--text);
+	}
+	50% {
+		box-shadow: 0 0 15px var(--text);
+	opacity: 0.85;
+	}
+	100%{
+	opacity: 0.75;
+	box-shadow: 0 0 10px var(--text);
+	}
+}
